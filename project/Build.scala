@@ -13,9 +13,11 @@ object Build extends AutoPlugin {
     ScalaFmtPlugin.autoImport.reformatOnCompileSettings ++
     Vector(
       resolvers ++= Seq {
-        "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
         "Sonatype SNAPSHOTS" at "https://oss.sonatype.org/content/repositories/snapshots/"
       },
+      resolvers ++= Seq {
+        "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
+      }, // FIXME I don't understand what I needed to write it this way, but it wasn't working without
       packageOptions := Seq(ManifestAttributes(
         ("Main-Verticle", "io.vertx.scala.sbt.DemoVerticle"))),
       organization := "io.vertx",

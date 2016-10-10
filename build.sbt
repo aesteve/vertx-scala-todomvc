@@ -1,14 +1,15 @@
 import sbtassembly.MergeStrategy
 
-lazy val `vertx-scala-sbt` = project
+lazy val `vertx-scala-todomvc` = project
   .in(file("."))
     .settings(
       mainClass in assembly := Some("io.vertx.core.Launcher")
     )
 
 libraryDependencies ++= Vector (
+  Library.jacksonScala,
   Library.vertxLangScala,
-  Library.vertxCodegen,
+  Library.vertxWeb,
   Library.scalaTest       % "test"
 )
 

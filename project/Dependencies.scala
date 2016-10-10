@@ -8,6 +8,7 @@ object Version {
 }
 
 object Library {
+  val jacksonScala   = "com.fasterxml.jackson.module" % "jackson-module-scala_2.10" % "2.8.3"
   val vertxCodegen   = "io.vertx"       %  "vertx-codegen"    % Version.VertxLangScala % "provided" changing()
   val vertxLangScala = "io.vertx"       %% "vertx-lang-scala" % Version.VertxLangScala              changing()
   val vertxWeb       = "io.vertx"       %% "vertx-web-scala"  % Version.VertxLangScala              changing()

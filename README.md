@@ -1,3 +1,17 @@
+# TodoMVC (server) implementation written in Scala using Vert.x
+
+## Temporary setup
+
+Build `vertx-lang-scala-stack` locally so that you can add `vertx-web-scala` as a dependency
+
+Read the `TODO` / `FIXME` comments to have an idea of what I'm missing, or simply what I am not experimented enough to code properly
+
+Test the app using [The todo backend spec checker](http://www.todobackend.com/specs/index.html?http://localhost:8181/todos) (unit tests to come)
+
+
+------------- 
+Original README
+
 #Getting vertx-lang-scala
 
 The current version in master is deployed as SNAPSHOTS in a sonatype repo (which is the default one configured fir this build)
